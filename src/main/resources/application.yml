@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/newssenderdb
+    username: postgres
+    password: dinar5440@bk.ru
+    driverClassName: org.postgresql.Driver
