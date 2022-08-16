@@ -9,5 +9,5 @@ class NewsSenderApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
+//todo make tests
 }
