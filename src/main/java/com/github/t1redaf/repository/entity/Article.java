@@ -7,17 +7,18 @@ import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(exclude = {"id"})
 @Getter
 @Setter
+@Builder
 public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @Column(name = "description")
-    @NotNull
+    @Column(nullable = false)
     String description;
 
     public Article(String description) {

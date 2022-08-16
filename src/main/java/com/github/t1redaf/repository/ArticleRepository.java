@@ -12,12 +12,12 @@ import java.util.Optional;
 public interface ArticleRepository extends JpaRepository<Article,Long> {
 
     @Query("SELECT a FROM Article a WHERE a.description LIKE ?1")
-    public Optional<Article> findArticleByDescription(String description);
+    Optional<Article> findArticleByDescription(String description);
 
     @Query("SELECT a FROM Article a WHERE a.description LIKE %?1%")
-    public List<Article> findArticlesByDescription(String description);
+    List<Article> findArticlesByDescription(String description);
 
     @Query("SELECT a.description FROM Article a")
-    public List<String> findAllTitles();
+    List<String> findAllTitles();
 
 }
